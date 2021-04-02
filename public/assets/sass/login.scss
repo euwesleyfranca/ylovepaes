@@ -1,0 +1,31 @@
+#login{
+    position: relative;
+    display: flex;
+    background-color: var(--bg);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .logo{
+        width: 140px;
+        height: 227px;             
+    }
+
+    .links{
+        position: absolute;
+        width: 288px;
+        bottom: var(--space);
+        flex-direction: row;
+        justify-content: space-around;
+
+        a{
+            text-decoration: none;
+            color: var(--brown-3);
+
+        }
+
+        a:hover{
+            color: var(--brown-1);
+        }
+    }
+}

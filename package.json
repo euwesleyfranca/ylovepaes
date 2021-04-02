@@ -1,0 +1,24 @@
+{
+    "name": "ylovepaes",
+    "version": "1.0.0",
+    "scripts": {
+        "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
+        "sass-build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
+        "build": "webpack --mode=production",
+        "dev": "webpack serve --content-base public --hot"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wesleymsdev/ylovepaes.git"
+    },
+    "keywords": [],
+    "author": "Wesley Franca",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hcode-courses/lab-hburguer/issues"
+    },
+    "homepage": "https://github.com/hcode-courses/lab-hburguer#readme",
+    "dependencies": {
+        "sass": "^1.32.8"
+    }
+}

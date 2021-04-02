@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+div,
+section,
+main,
+article,
+header,
+footer,
+form,
+a,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+#login {
+  position: relative;
+  display: flex;
+  background-color: var(--bg);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#login .logo {
+  width: 140px;
+  height: 227px;
+}
+#login .links {
+  position: absolute;
+  width: 288px;
+  bottom: var(--space);
+  flex-direction: row;
+  justify-content: space-around;
+}
+#login .links a {
+  text-decoration: none;
+  color: var(--brown-3);
+}
+#login .links a:hover {
+  color: var(--brown-1);
+}
+
+:root {
+  --white:#ffffff;
+  --black:#3c3c3c;
+  --bg: #DCD4D2;
+  --brown-1: #CE8272;
+  --brown-2: #B26859;
+  --brown-3: #734036;
+}
+
+.btn_primary {
+  display: flex;
+  width: 288px;
+  line-height: 40px;
+  background-color: var(--brown-3);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn_facebook {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 288px;
+  line-height: 40px;
+  background-color: var(--brown-3);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  margin: 5px;
+}
+.btn_facebook img {
+  position: absolute;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.btn_google {
+  position: relative;
+  display: flex;
+  width: 288px;
+  line-height: 40px;
+  background-color: var(--brown-3);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  margin: 5px;
+}
+.btn_google img {
+  position: absolute;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+:root {
+  --padding:20px;
+  --space: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
