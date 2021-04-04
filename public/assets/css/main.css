@@ -31,14 +31,29 @@ label {
   align-items: center;
   height: 100vh;
 }
+#login > header {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  width: 100%;
+  height: 53%;
+  top: 0;
+}
 #login .logo {
-  width: 140px;
-  height: 227px;
+  position: relative;
+  background-color: var(--bg);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 5px;
+  width: 290px;
+  border-radius: 14px;
+  height: 30%;
 }
 #login .links {
-  position: absolute;
+  position: relative;
+  top: 20px;
   width: 288px;
-  bottom: var(--space);
   flex-direction: row;
   justify-content: space-around;
 }
@@ -50,10 +65,310 @@ label {
   color: var(--brown-1);
 }
 
+@media (min-width: 768px) {
+  #login header {
+    display: flex;
+  }
+}
+#auth {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#auth header {
+  position: absolute;
+  top: 0;
+  background-color: var(--brown);
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+  padding-bottom: 25px;
+}
+#auth form {
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  height: 35%;
+  top: 60px;
+  padding-bottom: 10px;
+}
+#auth form label {
+  position: relative;
+  border: 1px solid var(--gray);
+  justify-content: center;
+  margin-bottom: 8px;
+}
+#auth form label input {
+  width: 288px;
+  height: 50px;
+  border: none;
+  padding-left: 40px;
+}
+#auth form label img {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+}
+#auth .links {
+  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  width: 90%;
+  top: 45px;
+}
+#auth .links a {
+  text-decoration: none;
+  color: var(--brown-3);
+}
+#auth .links a:hover {
+  color: var(--brown-1);
+}
+
+@media (min-width: 768px) {
+  #auth header {
+    height: 40%;
+  }
+  #auth form {
+    width: 50%;
+    background-color: var(--gray);
+    box-shadow: 0 0 1em var(--gray);
+  }
+  #auth form label input {
+    width: 288px;
+  }
+  #auth .links {
+    width: 50%;
+    top: 65px;
+  }
+}
+@media (min-width: 1024px) {
+  #auth form {
+    width: 40%;
+  }
+  #auth .links {
+    width: 35%;
+  }
+}
+@media (min-width: 1440px) {
+  #auth form {
+    width: 30%;
+  }
+  #auth .links {
+    width: 30%;
+  }
+}
+@media (min-width: 1920px) {
+  #auth header {
+    padding-bottom: 30px;
+  }
+  #auth form {
+    width: 20%;
+  }
+  #auth .links {
+    width: 20%;
+  }
+}
+#new_account {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#new_account header {
+  position: absolute;
+  top: 0;
+  background-color: var(--brown);
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+  padding-bottom: 25px;
+}
+#new_account form {
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  height: 58%;
+  top: 60px;
+  padding-bottom: 10px;
+}
+#new_account form label {
+  position: relative;
+  border: 1px solid var(--gray);
+  justify-content: center;
+  margin-bottom: 8px;
+}
+#new_account form label input {
+  width: 288px;
+  height: 50px;
+  border: none;
+  padding-left: 40px;
+}
+#new_account form label img {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+}
+#new_account form .avatar {
+  align-items: center;
+  cursor: pointer;
+}
+#new_account .links {
+  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  width: 90%;
+  top: 45px;
+}
+#new_account .links a {
+  text-decoration: none;
+  color: var(--brown-3);
+}
+#new_account .links a:hover {
+  color: var(--brown-1);
+}
+
+@media (min-width: 768px) {
+  #new_account header {
+    height: 40%;
+  }
+  #new_account form {
+    width: 50%;
+    height: 40%;
+    background-color: var(--gray);
+    box-shadow: 0 0 1em var(--gray);
+  }
+  #new_account form label input {
+    width: 288px;
+  }
+  #new_account .links {
+    width: 50%;
+    top: 65px;
+  }
+}
+@media (min-width: 1024px) {
+  #new_account form {
+    width: 40%;
+  }
+  #new_account .links {
+    width: 35%;
+  }
+}
+@media (min-width: 1440px) {
+  #new_account form {
+    width: 30%;
+  }
+  #new_account .links {
+    width: 30%;
+  }
+}
+@media (min-width: 1920px) {
+  #new_account header {
+    padding-bottom: 30px;
+  }
+  #new_account form {
+    width: 20%;
+  }
+  #new_account .links {
+    width: 20%;
+  }
+}
+#welcome {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#welcome header {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+#welcome .step_1 {
+  display: flex;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 10px;
+  background-color: var(--brown-3);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+#welcome .step_1 img {
+  padding-bottom: 10px;
+}
+#welcome .step_1 small {
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+}
+#welcome .step_1.open {
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+}
+#welcome .step_2 {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: calc(0px + 30%);
+  border-radius: 20px;
+  width: 90%;
+  line-height: 40px;
+  background-color: var(--brown-3);
+}
+#welcome .step_2 small {
+  color: var(--white);
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  #welcome .step_1 {
+    width: 60%;
+  }
+  #welcome .step_2 {
+    bottom: calc(0px + 25%);
+    width: 60%;
+    cursor: pointer;
+  }
+  #welcome .step_2:hover {
+    background-color: #5ee45e;
+  }
+  #welcome .step_2:hover small {
+    color: #303030;
+  }
+}
+@media (min-width: 1440px) {
+  #welcome .step_1 {
+    width: 35%;
+  }
+  #welcome .step_2 {
+    bottom: calc(0px + 30%);
+    width: 35%;
+  }
+}
 :root {
   --white:#ffffff;
   --black:#3c3c3c;
   --bg: #DCD4D2;
+  --gray:#DEDEDE;
+  --brown: #DCD4D2;
   --brown-1: #CE8272;
   --brown-2: #B26859;
   --brown-3: #734036;
@@ -71,6 +386,12 @@ label {
   margin: 5px;
   font-size: 16px;
   font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_primary:hover {
+  background-color: var(--brown-1);
 }
 
 .btn_facebook {
@@ -93,6 +414,10 @@ label {
   height: 25px;
 }
 
+.btn_facebook:hover {
+  background-color: var(--brown-1);
+}
+
 .btn_google {
   position: relative;
   display: flex;
@@ -112,6 +437,38 @@ label {
   height: 25px;
 }
 
+.btn_google:hover {
+  background-color: var(--brown-1);
+}
+
+.hr_primary {
+  background-color: var(--brown-3);
+  width: 20%;
+  border: none;
+  height: 1px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  #auth .hr_primary {
+    width: 18%;
+  }
+}
+@media (min-width: 1024px) {
+  #auth .hr_primary {
+    width: 12%;
+  }
+}
+@media (min-width: 1440px) {
+  #auth .hr_primary {
+    width: 10%;
+  }
+}
+@media (min-width: 1920px) {
+  #auth .hr_primary {
+    width: 7%;
+  }
+}
 :root {
   --padding:20px;
   --space: 20px;

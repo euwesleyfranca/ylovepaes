@@ -1,4 +1,4 @@
-#auth{
+#new_account{
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -21,7 +21,7 @@
         justify-content: center;
         align-items: center;
         width: 99%;
-        height: 35%;
+        height: 58%;
         top: 60px;
         padding-bottom: 10px;
         label{
@@ -44,7 +44,12 @@
                 left: 8px;               
             }
 
-        }       
+        } 
+        
+        .avatar{
+            align-items: center;
+            cursor: pointer;
+        }
     }
 
     .links{
@@ -66,13 +71,14 @@
 }
 
 @media(min-width: 768px){
-    #auth{
+    #new_account{
         header{
             height: 40%;
         }
 
         form{
             width: 50%;
+            height: 40%;
             background-color: var(--gray);
             box-shadow: 0 0 1em var(--gray);
 
@@ -90,10 +96,11 @@
 }
 
 @media(min-width: 1024px){
-    #auth{
+    #new_account{
 
         form{
             width: 40%;
+            
         }
         .links{
             width: 35%;
@@ -102,7 +109,7 @@
 }
 
 @media(min-width: 1440px){
-    #auth{
+    #new_account{
 
         form{
             width: 30%;
@@ -114,7 +121,7 @@
 }
 
 @media(min-width: 1920px){
-    #auth{
+    #new_account{
 
         header{
             padding-bottom: 30px;    

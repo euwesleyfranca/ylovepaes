@@ -1,5 +1,8 @@
 @use 'default';
 @use 'login';
+@use 'auth';
+@use 'new_account';
+@use 'welcome';
 @use 'colors';
 @use 'components';
 @use 'variables';
