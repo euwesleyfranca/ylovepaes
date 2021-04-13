@@ -14,6 +14,26 @@
     cursor: pointer;   
 }
 
+.btn_process{
+    display: flex;
+    width: 100px;
+    line-height: 40px;
+    background-color: var(--yellow);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black_l);
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;   
+}
+
+.btn_process:hover{
+    background-color: var(--orange_h); 
+}
+
 .btn_primary:hover{
     background-color: var(--brown-1); 
 }

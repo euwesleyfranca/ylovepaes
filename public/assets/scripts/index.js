@@ -1,1 +1,2 @@
+import './proccess';
 import './welcome';
