@@ -11,80 +11,49 @@
 </head>
 
 <body id="menu">
+    <div class="modal">
+        <div class="content">
+            <div class="credit_card">
+                <img src="/assets/images/logotipo/pay.svg" width="70" height="18" alt="">
 
-    <header class="header_menu">
-        <div class="top">
-            <div class="logo">
-                <a href="login.html">
-                    <img src="/assets/images/logotipo/logo68.svg" width="68" height="100" alt="ylove pães logotipo" />
-                </a>
+                <h3>0000 0000 0000 0000</h3>
+
+                <div class="footer_card">
+                    <p>WESLEY S FRANCA</p>
+                    <span>
+                        30/22 850
+                    </span>
+                </div>
             </div>
 
-            <div class="avatar">
-                <img src="/assets/images/avatar/avatar.svg" width="50" height="50" alt="Avatar" />
-                <small>Seja bem vindo(a)</small>
-                <span>Wesley Franca</span>
-            </div>
+            <img src="assets/images/creditcard/creditcard.svg" class="card" width="300" alt="">
 
-            <div class="menu">
-                <img src="/assets/images/icons/menu.svg" width="24" height="24" alt="Menu icone" />
+            <div class="data">
+
+                <form action="#" method="post">
+
+                    <label for="number">Número do cartão</label>
+                    <input type="number" id="number" value="number" required />
+
+                    <label for="date">Nome</label>
+                    <input type="text" id="date" name="date" required />
+
+                    <div>
+                        <label for="valid">Validade do cartão
+                            <input type="text" id="valid" name="valid" required />
+                        </label>
+                        <label for="cod">Código:
+                            <input type="text" id="cod" name="cod" required />
+                        </label>
+                    </div>
+                    <button type="submit" class="button_pay">aguardando...</button>
+
+                </form>
             </div>
         </div>
-        <div class="menu_proccess">
-            <span class="bullet"></span>
-            <hr class="proccess_1" />
-            <span class="bullet"></span>
-            <hr class="proccess_1" />
-            <span class="bullet"></span>
-
-            <div class="cart">
-                <img src="/assets/images/icons/cart.svg" width="24" height="24" alt="Cart" />
-                <span class="qtda_products">
-                    <small>5</small>
-                </span>
-
-                <span class="itens">Itens</span>
-            </div>
-
-        </div>
-
-    </header>
-
+    </div>
     <div class="container">
 
-        <div class="credit_card">
-            <img src="/assets/images/logotipo/pay.svg" width="70" height="18" alt="">
-
-            <h3>0000 0000 0000 0000</h3>
-
-            <div class="footer_card">
-                <p>WESLEY S FRANCA</p>
-                <span>
-                    30/22 850
-                </span>
-            </div>
-        </div>
-        <div class="data">
-            <form action="#" method="post">
-
-                <label for="number">Number Card</label>
-                <input type="number" id="number" value="number" required />
-
-                <label for="date">Nome</label>
-                <input type="text" id="date" name="date" required />
-
-                <div>
-                    <label for="valid">Validade
-                        <input type="text" id="valid" name="valid" required />
-                    </label>
-                    <label for="cod">Cód:
-                        <input type="text" id="cod" name="cod" required />
-                    </label>
-                </div>
-                <button type="submit" class="button_pay">Finalizar Pagamento</button>
-
-            </form>
-        </div>
     </div>
 
     <script src="bundle.js"></script>
