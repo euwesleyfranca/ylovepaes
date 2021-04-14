@@ -369,41 +369,41 @@ label {
 #menu .header_menu {
   flex-direction: column;
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--white);
 }
-#menu .header_menu .container {
+#menu .header_menu .top {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 107px;
 }
-#menu .header_menu .container .logo {
+#menu .header_menu .top .logo {
   justify-content: center;
   align-items: center;
   width: 33%;
   height: 100%;
   padding: 5px;
 }
-#menu .header_menu .container .avatar {
+#menu .header_menu .top .avatar {
   justify-content: center;
   align-items: center;
   width: 35%;
   height: 100%;
 }
-#menu .header_menu .container .avatar small {
+#menu .header_menu .top .avatar small {
   font-size: 12px;
-  color: var(--bg);
+  color: var(--black_l);
 }
-#menu .header_menu .container .avatar span {
+#menu .header_menu .top .avatar span {
   font-size: 16px;
-  color: var(--bg);
+  color: var(--black_l);
 }
-#menu .header_menu .container .menu {
+#menu .header_menu .top .menu {
   position: relative;
   width: 32%;
   height: 100%;
 }
-#menu .header_menu .container .menu img {
+#menu .header_menu .top .menu img {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -441,7 +441,7 @@ label {
   background-color: var(--orange);
   color: var(--white);
 }
-#menu .header_menu .menu_proccess .cart .amount {
+#menu .header_menu .menu_proccess .cart .itens {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -460,49 +460,147 @@ label {
   border-radius: 50%;
   background-color: var(--black);
 }
-#menu .products {
+#menu .container {
   position: relative;
   background-color: var(--bg);
   width: 100%;
   height: calc(100vh - 157px);
 }
-#menu .products .product {
+#menu .container .product {
   flex-direction: row;
   justify-content: space-between;
   margin-top: var(--space);
+  padding: 4px;
   width: 100%;
 }
-#menu .products .product picture {
+#menu .container .product picture {
   display: flex;
   align-items: center;
 }
-#menu .products .product .description {
+#menu .container .product .description {
   justify-content: center;
   background-color: var(--gray);
   padding: 2px;
   width: 100%;
 }
-#menu .products .product .description p {
+#menu .container .product .description p {
   font-size: 16px;
   font-weight: 600;
   margin: 0px;
 }
-#menu .products .product .description span {
+#menu .container .product .description span {
   font-size: 12px;
   font-weight: 400;
 }
-#menu .products .product .price {
+#menu .container .product .price {
   justify-content: center;
   align-items: center;
   width: 100px;
   background-color: var(--yellow);
 }
-#menu .products .product .price > span {
+#menu .container .product .price > span {
   font-size: 20px;
   font-weight: 600;
   color: var(--black_l);
 }
-#menu .products .footer_menu {
+#menu .container h1 {
+  font-size: 20px;
+}
+#menu .container .list .header_list {
+  background-color: var(--black);
+}
+#menu .container .list .header_list > li {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2px;
+  margin: 0;
+}
+#menu .container .list ul {
+  margin: 4px;
+  padding: 0;
+}
+#menu .container .list ul li {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gray);
+  list-style: none;
+  padding: 2px;
+  margin-top: 10px;
+}
+#menu .container .total_price {
+  position: absolute;
+  font-weight: 600;
+  right: 4px;
+  bottom: 60px;
+}
+#menu .container .credit_card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 310px;
+  height: 300px;
+  padding: 4px;
+  border-radius: 10px;
+  border: 4px solid #449cdc;
+  background-color: var(--black);
+}
+#menu .container .credit_card img {
+  margin: 0 auto;
+}
+#menu .container .credit_card h3 {
+  color: var(--white);
+}
+#menu .container .credit_card .footer_card {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+#menu .container .credit_card .footer_card p {
+  margin: 0;
+  color: var(--white);
+}
+#menu .container .credit_card .footer_card span {
+  color: var(--white);
+  font-size: 14px;
+}
+#menu .container .data {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  height: 100vh;
+  width: 100%;
+}
+#menu .container .data form {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 300px);
+  background-color: cadetblue;
+}
+#menu .container .data form label {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 12px;
+}
+#menu .container .data form input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+#menu .container .data form .button_pay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border: none;
+  background-color: #449cdc;
+  line-height: 50px;
+  font-size: 16px;
+  color: var(--white);
+}
+#menu .container .footer_menu {
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
@@ -520,11 +618,20 @@ label {
   #menu .header_menu .menu_proccess .cart {
     left: 13%;
   }
-  #menu .products {
+  #menu .container {
     width: 75%;
   }
-  #menu .products .product {
+  #menu .container .product {
     height: 80px;
+  }
+  #menu .container .list .header_list li {
+    font-size: 18px;
+  }
+  #menu .container .list ul li {
+    font-size: 18px;
+  }
+  #menu .container .total_price {
+    font-size: 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -542,8 +649,22 @@ label {
   #menu .header_menu .menu_proccess .cart {
     left: 14%;
   }
-  #menu .products {
+  #menu .container {
     width: 72%;
+  }
+}
+@media (min-width: 1440px) {
+  #menu .container h1 {
+    font-size: 24px;
+  }
+  #menu .container .list .header_list li {
+    font-size: 20px;
+  }
+  #menu .container .list ul li {
+    font-size: 20px;
+  }
+  #menu .container .total_price {
+    font-size: 20px;
   }
 }
 @media (min-width: 1920px) {
@@ -567,6 +688,7 @@ label {
   --brown-3: #734036;
   --orange:#D98F4E;
   --orange_h:#d88236;
+  --roxo:hsl(298, 81%, 30%);
 }
 
 .btn_primary {

@@ -52,30 +52,40 @@
 
     <div class="container">
 
-        <div class="product">
-            <picture>
-                <img src="/assets/images/products/pao-caseiro-em-sao-paulo.webp" width="90" height="60"
-                    alt="Pão caseiro">
-            </picture>
-            <div class="description">
-                <p>Pão Caseiro Simples</p>
-                <span>30cm de pão caseiro feito com um toque de carinho especial</span>
-            </div>
-            <div class="price">
-                <span>10</span>
-                <small>reais</small>
+        <div class="credit_card">
+            <img src="/assets/images/logotipo/pay.svg" width="70" height="18" alt="">
+
+            <h3>0000 0000 0000 0000</h3>
+
+            <div class="footer_card">
+                <p>WESLEY S FRANCA</p>
+                <span>
+                    30/22 850
+                </span>
             </div>
         </div>
+        <div class="data">
+            <form action="#" method="post">
 
-        <span class="total_price">Total: R$ 0,00</span>
+                <label for="number">Number Card</label>
+                <input type="number" id="number" value="number" required />
 
-        <div class="footer_menu">
-            <div></div>
-            <a href="details.html" id="proccess" class="btn_process">Próximo</a>
+                <label for="date">Nome</label>
+                <input type="text" id="date" name="date" required />
+
+                <div>
+                    <label for="valid">Validade
+                        <input type="text" id="valid" name="valid" required />
+                    </label>
+                    <label for="cod">Cód:
+                        <input type="text" id="cod" name="cod" required />
+                    </label>
+                </div>
+                <button type="submit" class="button_pay">Finalizar Pagamento</button>
+
+            </form>
         </div>
     </div>
-
-
 
     <script src="bundle.js"></script>
 </body>
