@@ -11,35 +11,35 @@ if (welcome) {
 
     window.onload = attendance;
 
-    function attendance(){
-        
-       setTimeout(() => {
-           step1.classList.add('open');
-           saudation.innerHTML = 'Ola, meu nome é Julia, atendente virtual da Ylove Pães!'
-       }, 1000);
+    function attendance() {
 
-       setTimeout(() => {
-        step1.classList.remove('open');         
-       }, 6000);
+        setTimeout(() => {
+            step1.classList.add('open');
+            saudation.innerHTML = 'Seja bem vindo a Ilove Pães, uma nova experiência em pães caseiros!'
+        }, 1000);
 
-       setTimeout(() => {
-           step1.classList.add('open');
-           saudation.innerHTML = 'Quero te dar as boas vindas a Ylove, seu pão caseiro quentinho de todos os dias!'
-       }, 7000);
+        setTimeout(() => {
+            step1.classList.remove('open');
+        }, 7000);
 
-       setTimeout(() => {
-           step1.classList.remove('open');
-       }, 12000);
+        setTimeout(() => {
+            step1.classList.add('open');
+            saudation.innerHTML = 'Pães quentes e fresquinhos... Uma explosão de sabores... '
+        }, 8000);
 
-       setTimeout(() => {
-           step1.classList.add('open');
-           saudation.innerHTML = 'Vamos começar?'
-       }, 13000);
+        setTimeout(() => {
+            step1.classList.remove('open');
+        }, 13000);
 
-       setTimeout(() => {
-           client.style.display = "flex";
-       }, 15000);
-                
+        setTimeout(() => {
+            step1.classList.add('open');
+            saudation.innerHTML = 'E se puder fique em casa... nós entregamos pra você!'
+        }, 14000);
+
+        setTimeout(() => {
+            client.style.display = "flex";
+        }, 20000);
+
     }
 }
 

@@ -7,6 +7,8 @@
         position: absolute;
         top: 0;
         background-color: var(--brown);
+        background-image: url('/assets/images/background/paes-caseiros-em-sao-paulo.jpg');
+        background-repeat: no-repeat;
         justify-content: flex-end;
         align-items: center;
         width: 100%;
@@ -21,7 +23,7 @@
         justify-content: center;
         align-items: center;
         width: 99%;
-        height: 58%;
+        height: 70%;
         top: 60px;
         padding-bottom: 10px;
         label{
@@ -78,7 +80,7 @@
 
         form{
             width: 50%;
-            height: 40%;
+            height: 60%;
             background-color: var(--gray);
             box-shadow: 0 0 1em var(--gray);
 
@@ -108,12 +110,23 @@
     }
 }
 
-@media(min-width: 1440px){
+
+@media(min-width: 1366px){
     #new_account{
 
         form{
+            width: 25%;
+           
+        }
+        .links{
             width: 30%;
         }
+    }
+}
+
+@media(min-width: 1440px){
+    #new_account{
+
         .links{
             width: 30%;
         }
