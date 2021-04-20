@@ -1,9 +1,8 @@
-const welcome = document.querySelectorAll("#welcome");
 
-if (welcome) {
-    const step1 = document.querySelector('.step_1');
-    const saudation = document.querySelector('.saudation');
-    const client = document.querySelector('.step_2');
+document.querySelectorAll("#welcome").forEach((page) => {
+    const step1 = page.querySelector('.step_1');
+    const saudation = page.querySelector('.saudation');
+    const client = page.querySelector('.step_2');
 
     client.style.display = "none";
 
@@ -41,7 +40,7 @@ if (welcome) {
         }, 20000);
 
     }
-}
+});
 
 
 

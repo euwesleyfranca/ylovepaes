@@ -7,13 +7,14 @@
     <meta name="description" content="Pães caseiros feitos com carinho, entregues quetinhos na sua casa" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="assets/css/cropper.min.css" rel="stylesheet">
     <title>Ylove-Pães | Especialistas em pães caseiros</title>
 </head>
 
 <body id="new_account" class="new_account">
     <header></header>
 
-    <form action="welcome.html">
+    <form id="new_user">
         <div class="logo">
             <a href="login.html">
                 <img src="/assets/images/logotipo/logo68.svg" width="68" height="107" alt="ylove pães logotipo" />
@@ -23,21 +24,35 @@
             <input id="email" type="text" name="email" placeholder="digite seu email" />
             <img src="/assets/images/icons/mail.svg" width="24px" height="24px" alt="email new_account icon" />
         </label>
-        <label for="password">
-            <input id="password" type="password" name="password" placeholder="digite sua senha" />
-            <img src="/assets/images/icons/person.svg" width="24px" height="24px" alt="password new_account icon" />
+
+        <label for="name">
+            <input id="name" type="text" name="name" placeholder="seu nome" />
+            <img src="/assets/images/icons/person.svg" width="24px" height="24px" alt="name new_account icon" />
         </label>
 
-        <div class="avatar">
-            <img src="./assets/images/avatar/avatar.svg" width="110px" height="110px" alt="icon avatar"
-                id="icon-avatar" />
-            <small>Selecione um foto</small>
-            <input type="file" name="upload" id="upload-image" style="display: none;" />
+        <label for="password">
+            <input id="password" type="password" name="password" placeholder="digite sua senha" required />
+            <img src="/assets/images/icons/password.svg" width="24px" height="24px" alt="password new_account icon" />
+        </label>
+
+        <label for="confirm-password">
+            <input id="confirm-password" type="password" name="confirm-password" placeholder="confirme sua senha"
+                required />
+            <img src="/assets/images/icons/password.svg" width="24px" height="24px"
+                alt="confirm password new_account icon" />
+        </label>
+
+        <div id="error">
+            <small id="message" class="message">Houve um erro</small>
         </div>
 
-        <button class="btn_primary" type="submit">Aguardando...</button>
-    </form>
+        <div id="progress">
+            <button id="btn_register" class="btn_progress" type="submit">Salvar</button>
+            <div id="overlay"></div>
+        </div>
 
+    </form>
+    <script src="bundle.js"></script>
 </body>
 
 </html>

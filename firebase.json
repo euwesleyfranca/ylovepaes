@@ -6,5 +6,13 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  }
+  },
+  "apiKey": "AIzaSyCvSklZbNE8OCKPy2b726_NVZVJBowYZOg",
+  "authDomain": "ylovepaes.firebaseapp.com",
+  "databaseURL": "https://ylovepaes-default-rtdb.firebaseio.com",
+  "projectId": "ylovepaes",
+  "storageBucket": "ylovepaes.appspot.com",
+  "messagingSenderId": "1011127287926",
+  "appId": "1:1011127287926:web:77dddbbd4402dd82ae5f57",
+  "measurementId": "G-WHPDWPKRNF"
 }

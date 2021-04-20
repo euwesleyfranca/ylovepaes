@@ -23,6 +23,26 @@ label {
   flex-direction: column;
 }
 
+#error {
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  width: 288px;
+  height: 50px;
+  margin-bottom: 8px;
+  background-color: #fc8383;
+}
+
+#success {
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  width: 288px;
+  height: 50px;
+  margin-bottom: 8px;
+  background-color: #6cd16c;
+}
+
 #login {
   position: relative;
   display: flex;
@@ -632,41 +652,58 @@ label {
   height: calc(100vh - 157px);
 }
 #menu .container .product {
+  flex-direction: column;
+}
+#menu .container .product label {
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 8px;
   padding: 4px;
   width: 100%;
+  cursor: pointer;
 }
-#menu .container .product picture {
+#menu .container .product label .over {
+  position: absolute;
+  padding: 4px;
+  width: 100%;
+  height: 70px;
+  background-color: var(--brown-1);
+  opacity: 0.1;
+  display: none;
+}
+#menu .container .product label picture {
   display: flex;
   align-items: center;
 }
-#menu .container .product .description {
+#menu .container .product label .description {
   justify-content: center;
   background-color: var(--gray);
   padding: 2px;
   width: 100%;
 }
-#menu .container .product .description p {
+#menu .container .product label .description p {
   font-size: 16px;
   font-weight: 600;
   margin: 0px;
 }
-#menu .container .product .description span {
+#menu .container .product label .description span {
   font-size: 12px;
   font-weight: 400;
 }
-#menu .container .product .price {
+#menu .container .product label .price {
   justify-content: center;
   align-items: center;
   width: 100px;
   background-color: var(--yellow);
 }
-#menu .container .product .price > span {
+#menu .container .product label .price > span {
   font-size: 20px;
   font-weight: 600;
   color: var(--black_l);
+}
+#menu .container .product label:hover .over {
+  display: block;
 }
 #menu .container h1 {
   font-size: 18px;
@@ -784,6 +821,7 @@ label {
   --gray-1:#949494;
   --brown: #DCD4D2;
   --brown-1: #CE8272;
+  --brown-over: #bd7566;
   --brown-2: #B26859;
   --brown-3: #734036;
   --orange:#D98F4E;
@@ -793,6 +831,45 @@ label {
   --green-1:#87ce1d;
   --red:#ac2929;
   --red-1:#f34949;
+}
+
+#progress {
+  position: relative;
+  border: 1px solid var(--brown-1);
+  width: 288px;
+  height: 43px;
+}
+#progress .btn_progress {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 288px;
+  line-height: 40px;
+  background: none;
+  width: 288px;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+#progress #overlay {
+  position: absolute;
+  z-index: 1;
+  width: 288px;
+  height: 43px;
+}
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .btn_primary {
@@ -809,6 +886,10 @@ label {
   font-weight: 500;
   border: none;
   cursor: pointer;
+}
+
+.btn_primary:hover {
+  background-color: var(--brown-1);
 }
 
 .btn_process {
@@ -829,10 +910,6 @@ label {
 
 .btn_process:hover {
   background-color: var(--orange_h);
-}
-
-.btn_primary:hover {
-  background-color: var(--brown-1);
 }
 
 .btn_facebook {

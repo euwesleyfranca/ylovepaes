@@ -1,3 +1,44 @@
+#progress{
+    position: relative;
+    border: 1px solid var(--brown-1);
+    width: 288px;
+    height: 43px;   
+    
+    .btn_progress{
+    position:absolute;
+    z-index: 2;
+    display: flex;
+    width: 288px;
+    line-height: 40px;
+    background: none;
+    width: 288px;
+    justify-content: center;
+    outline:none;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;   
+}
+
+#overlay{
+    position: absolute;
+    z-index: 1;
+    width: 288px;
+    height: 43px;
+}
+
+@keyframes progress-animation{
+    0% { width: 0%; }
+    
+    100% { width: 100%}    
+}
+
+}
+
+
 .btn_primary{
     display: flex;
     width: 288px;
@@ -12,6 +53,10 @@
     font-weight: 500;
     border: none;
     cursor: pointer;   
+}
+
+.btn_primary:hover{
+    background-color: var(--brown-1); 
 }
 
 .btn_process{
@@ -32,10 +77,6 @@
 
 .btn_process:hover{
     background-color: var(--orange_h); 
-}
-
-.btn_primary:hover{
-    background-color: var(--brown-1); 
 }
 
 .btn_facebook{
