@@ -760,6 +760,98 @@ label {
     width: 33%;
   }
 }
+#checkout {
+  position: fixed;
+  top: 50px;
+  z-index: 6;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px;
+  overflow-y: scroll;
+  transition: 0.7s ease-in-out;
+  visibility: hidden;
+  background-color: var(--white);
+  align-items: center;
+}
+#checkout.active {
+  display: flex;
+  z-index: 5;
+  right: 0;
+  visibility: visible;
+  transition: 0.7s ease-in-out;
+  background-color: #010326;
+}
+#checkout .logo_pay {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 86%;
+  height: 35px;
+  margin-top: 12px;
+  background-color: #f2cf63;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-weight: 600;
+}
+#checkout .logo_pay span {
+  font-weight: 300;
+}
+#checkout .displayCheckout {
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: #172262;
+  border: 20px solid var(--black_l);
+}
+#checkout .displayCheckout .dataDisplay {
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 95%;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+#checkout .displayCheckout .dataDisplay p {
+  font-size: 16px;
+  text-align: center;
+}
+#checkout .formData {
+  width: 95%;
+  height: 100px;
+}
+#checkout .btn_insert_card {
+  width: 50px;
+  height: 30px;
+  background-color: var(--white);
+}
+
+@media (min-width: 768px) {
+  #checkout {
+    top: 0px;
+  }
+  #checkout ul li a {
+    line-height: 90px;
+  }
+}
+@media (min-width: 1024px) {
+  #checkout {
+    width: 33%;
+  }
+}
+@media (min-width: 1440px) {
+  #checkout {
+    width: 25%;
+  }
+}
+@media (min-width: 1920px) {
+  #checkout {
+    width: 20%;
+  }
+}
 :root {
   --white:#ffffff;
   --black:#260F06;
@@ -1120,7 +1212,6 @@ label {
   transition: 0.7s ease-in-out;
   visibility: hidden;
   background-color: var(--white);
-  justify-content: center;
   align-items: center;
 }
 #newMenu.active {
@@ -1129,6 +1220,7 @@ label {
   right: 0;
   visibility: visible;
   transition: 0.7s ease-in-out;
+  background-color: var(--bg);
 }
 #newMenu ul {
   display: flex;
@@ -1146,16 +1238,193 @@ label {
 }
 #newMenu ul li a {
   text-decoration: none;
-  line-height: 90px;
+  line-height: 75px;
   text-align: center;
   color: var(--brown-1);
   text-transform: uppercase;
   font-size: 16px;
 }
+#newMenu .headerMenu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: blueviolet;
+}
 
+@media (min-width: 768px) {
+  #newMenu {
+    top: 0px;
+  }
+  #newMenu ul li a {
+    line-height: 90px;
+  }
+}
 @media (min-width: 1024px) {
   #newMenu {
     width: 33%;
+  }
+}
+@media (min-width: 1440px) {
+  #newMenu {
+    width: 25%;
+  }
+}
+@media (min-width: 1920px) {
+  #newMenu {
+    width: 33%;
+  }
+}
+#container {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+}
+#container .header_product_list {
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../images/background/pao-caseiro-em-sao-paulo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+#container .header_product_list h1 {
+  position: absolute;
+  z-index: 2;
+  font-size: 18px;
+  color: var(--white);
+}
+#container .header_product_list .over {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black_l);
+  opacity: 0.4;
+}
+#container .productList {
+  width: 98%;
+  height: 100vh;
+  background-color: var(--bg);
+  height: calc(100% - 50px);
+  padding-top: 10px;
+}
+#container .productList .products {
+  flex-direction: column;
+  width: 100%;
+  overflow: scroll;
+}
+#container .productList .products .item {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid var(--gray);
+}
+#container .productList .products .description {
+  padding: 2px;
+  width: 100%;
+  height: 70px;
+}
+#container .productList .products .description p {
+  color: var(--brown-1);
+  margin: 0;
+  padding: 0;
+}
+#container .productList .products .price {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--brown-1);
+  width: 60px;
+  height: 70px;
+  padding: 2px;
+}
+#container .productList .products .price p {
+  margin: 0;
+  padding: 0;
+}
+#container .productList .products .price small {
+  margin: 0;
+  padding: 0;
+}
+#container .footer_container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+  height: 50px;
+  background-color: var(--black_l);
+  justify-content: center;
+}
+#container .footer_container .btn_next {
+  display: flex;
+  width: 112px;
+  line-height: 40px;
+  background-color: var(--brown-1);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black_l);
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+#container .footer_container .btn_prev {
+  display: flex;
+  width: 112px;
+  line-height: 40px;
+  background-color: var(--gray);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black_l);
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  #container .header_product_list {
+    height: 300px;
+  }
+  #container .header_product_list h1 {
+    font-size: 26px;
+  }
+  #container .productList .products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #container .productList .products .item {
+    width: 49%;
+  }
+  #container .footer_container {
+    width: 98%;
+  }
+}
+@media (min-width: 1440px) {
+  #container .productList {
+    width: 75%;
+  }
+  #container .footer_container {
+    width: 75%;
   }
 }
 

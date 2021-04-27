@@ -1,0 +1,106 @@
+#checkout {
+  position: fixed;
+  top: 50px;
+  z-index: 6;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px;
+  overflow-y: scroll;
+  transition: 0.7s ease-in-out;
+  visibility: hidden;
+  background-color: var(--white);
+  align-items: center;
+
+  &.active {
+    display: flex;
+    z-index: 5;
+    right: 0;
+    visibility: visible;
+    transition: 0.7s ease-in-out;
+    background-color: #010326;
+  }
+
+  .logo_pay {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+    height: 35px;
+    margin-top: 12px;
+    background-color: #f2cf63;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: 600;
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .displayCheckout {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #172262;
+    border: 20px solid var(--black_l);
+
+    .dataDisplay {
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      width: 95%;
+      height: 100px;
+      background-color: cornflowerblue;
+
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  .formData {
+    width: 95%;
+    height: 100px;
+  }
+
+  .btn_insert_card {
+    width: 50px;
+    height: 30px;
+    background-color: var(--white);
+  }
+}
+
+@media (min-width: 768px) {
+  #checkout {
+    top: 0px;
+    ul {
+      li {
+        a {
+          line-height: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #checkout {
+    width: 33%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #checkout {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1920px) {
+  #checkout {
+    width: 20%;
+  }
+}
