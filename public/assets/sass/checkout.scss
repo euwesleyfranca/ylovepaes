@@ -7,7 +7,7 @@
   width: 100%;
   height: 100vh;
   padding-top: 60px;
-  overflow-y: scroll;
+  overflow-y: auto;
   transition: 0.7s ease-in-out;
   visibility: hidden;
   background-color: var(--white);
@@ -20,62 +20,166 @@
     visibility: visible;
     transition: 0.7s ease-in-out;
     background-color: #010326;
+    overflow-y: auto;
   }
 
-  .logo_pay {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 86%;
-    height: 35px;
-    margin-top: 12px;
-    background-color: #f2cf63;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    font-weight: 600;
-    span {
-      font-weight: 300;
+  .summary {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    background-color: cornflowerblue;
+    margin-top: 10px;
+    border: 15px solid var(--black_l);
+    padding: 4px;
+    overflow-y: auto;
+
+    .summary_title {
+      color: var(--white);
+      text-align: center;
+    }
+
+    .summary_details {
+      flex-direction: row;
+      justify-content: center;
+      justify-content: space-between;
+      padding: 4px;
+      width: 100%;
+      margin-bottom: 8px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .copyright {
+      position: absolute;
+      width: 100%;
+      background-color: var(--black_l);
+      text-align: right;
+      color: var(--white);
+      bottom: 0;
+      right: 0;
+      font-size: 9px;
     }
   }
 
-  .displayCheckout {
+  .machine {
     flex-direction: column;
-    padding: 10px;
     align-items: center;
-    width: 100%;
-    height: 200px;
-    background-color: #172262;
-    border: 20px solid var(--black_l);
+    overflow-y: auto;
+    height: 270px;
 
-    .dataDisplay {
+    .logo_pay {
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-top: 10px;
-      width: 95%;
-      height: 100px;
-      background-color: cornflowerblue;
+      width: 86%;
+      height: 35px;
+      margin-top: 12px;
+      background-color: #f2cf63;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      font-weight: 600;
+      span {
+        font-weight: 300;
+      }
+    }
 
-      p {
-        font-size: 16px;
-        text-align: center;
+    .displayCheckout {
+      flex-direction: column;
+      padding: 10px;
+      align-items: center;
+      width: 100%;
+      height: 200px;
+      background-color: #172262;
+      border: 20px solid var(--black_l);
+
+      .dataDisplay {
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        width: 95%;
+        height: 100px;
+        background-color: cornflowerblue;
+
+        p {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+
+    .formData {
+      width: 95%;
+      height: 175px;
+
+      form {
+        label {
+          font-size: 14px;
+          color: var(--bg);
+        }
+
+        .credit_card_input {
+          line-height: 30px;
+          border: none;
+          background-color: var(--black_l);
+          outline: none;
+          color: #f2cf63;
+        }
+
+        .date_code {
+          flex-direction: row;
+          height: 50px;
+        }
+
+        .input_small {
+          line-height: 30px;
+          width: 99%;
+          border: none;
+          background-color: var(--black_l);
+          outline: none;
+          color: #f2cf63;
+        }
       }
     }
   }
 
-  .formData {
+  .btn_insert_card {
+    justify-content: center;
+    align-items: center;
     width: 95%;
-    height: 100px;
+    height: 33px;
+    background-color: #f2cf63;
+    cursor: pointer;
   }
 
-  .btn_insert_card {
-    width: 50px;
-    height: 30px;
-    background-color: var(--white);
+  .btn_insert_card:hover {
+    background-color: #f0d891;
+  }
+}
+
+@media (min-width: 360px) {
+  #checkout {
+    .machine {
+      height: 53vh;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  #checkout {
+    .summary {
+      height: 270px;
+    }
+    .machine {
+      height: 48vh;
+    }
   }
 }
 
 @media (min-width: 768px) {
   #checkout {
+    width: 42%;
     top: 0px;
     ul {
       li {
@@ -83,6 +187,9 @@
           line-height: 90px;
         }
       }
+    }
+    .machine {
+      height: 48vh;
     }
   }
 }
@@ -93,14 +200,36 @@
   }
 }
 
+@media (min-width: 1366px) {
+  #checkout {
+    width: 21%;
+
+    .summary {
+      height: 241px;
+    }
+
+    .machine {
+      height: 54vh;
+    }
+  }
+}
+
 @media (min-width: 1440px) {
   #checkout {
     width: 25%;
+
+    .summary {
+      height: 241px;
+    }
+
+    .machine {
+      height: 61vh;
+    }
   }
 }
 
 @media (min-width: 1920px) {
   #checkout {
-    width: 20%;
+    width: 16%;
   }
 }
