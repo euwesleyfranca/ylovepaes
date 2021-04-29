@@ -1,150 +1,141 @@
-#new_account{
-    justify-content: center;
+#new_account {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  header {
+    position: absolute;
+    top: 0;
+    background-color: var(--brown);
+    background-image: url("/assets/images/background/paes-caseiros-em-sao-paulo.jpg");
+    background-repeat: no-repeat;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    header{
+    height: 35%;
+    padding-bottom: 25px;
+  }
+
+  form {
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 70%;
+    top: 60px;
+    padding-bottom: 10px;
+    label {
+      position: relative;
+      border: 1px solid var(--gray);
+      justify-content: center;
+      margin-bottom: 8px;
+
+      input {
+        width: 288px;
+        height: 50px;
+        border: none;
+        padding-left: 40px;
+      }
+
+      img {
         position: absolute;
-        top: 0;
-        background-color: var(--brown);
-        background-image: url('/assets/images/background/paes-caseiros-em-sao-paulo.jpg');
-        background-repeat: no-repeat;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        height: 35%;
-        padding-bottom: 25px;        
-    }  
-    
-    form{
-        position: relative;
-        z-index: 1;
-        border-radius: 5px;
-        justify-content: center;
-        align-items: center;
-        width: 99%;
-        height: 70%;
-        top: 60px;
-        padding-bottom: 10px;
-        label{
-            position: relative;
-            border: 1px solid var(--gray);
-            justify-content: center;
-            margin-bottom: 8px; 
-                      
-            input{
-            width: 288px;
-            height: 50px;
-            border: none; 
-            padding-left: 40px;           
-            
-            }  
-            
-            img{
-                position: absolute;
-                top: 13px;
-                left: 8px;               
-            }
-
-        } 
-        
-        .avatar{
-            align-items: center;
-            cursor: pointer;
-        }
+        top: 13px;
+        left: 8px;
+      }
     }
 
-    .links{
-        position: relative;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 5px;
-        width: 90%;
-        top: 45px;
-        a{
-            text-decoration: none;
-            color: var(--brown-3);
-        }
-
-        a:hover{
-            color: var(--brown-1);
-        }
+    .avatar {
+      align-items: center;
+      cursor: pointer;
     }
+  }
+
+  .links {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+    width: 90%;
+    top: 45px;
+    a {
+      text-decoration: none;
+      color: var(--brown-3);
+    }
+
+    a:hover {
+      color: var(--brown-1);
+    }
+  }
 }
 
-@media(min-width: 768px){
-    #new_account{
-        header{
-            height: 40%;
-        }
-
-        form{
-            width: 50%;
-            height: 60%;
-            background-color: var(--gray);
-            box-shadow: 0 0 1em var(--gray);
-
-            label{
-                input{
-                    width: 288px;
-                }
-            }
-        }
-        .links{
-            width: 50%;
-            top: 65px;
-        }
+@media (min-width: 768px) {
+  #new_account {
+    header {
+      height: 40%;
     }
+
+    form {
+      width: 50%;
+      height: 60%;
+      background-color: var(--gray);
+      box-shadow: 0 0 1em var(--gray);
+
+      label {
+        input {
+          width: 288px;
+        }
+      }
+    }
+    .links {
+      width: 50%;
+      top: 65px;
+    }
+  }
 }
 
-@media(min-width: 1024px){
-    #new_account{
-
-        form{
-            width: 40%;
-            
-        }
-        .links{
-            width: 35%;
-        }
+@media (min-width: 1024px) {
+  #new_account {
+    form {
+      width: 40%;
     }
+    .links {
+      width: 35%;
+    }
+  }
 }
 
-
-@media(min-width: 1366px){
-    #new_account{
-
-        form{
-            width: 25%;
-           
-        }
-        .links{
-            width: 30%;
-        }
+@media (min-width: 1366px) {
+  #new_account {
+    form {
+      width: 25%;
     }
+    .links {
+      width: 30%;
+    }
+  }
 }
 
-@media(min-width: 1440px){
-    #new_account{
-
-        .links{
-            width: 30%;
-        }
+@media (min-width: 1440px) {
+  #new_account {
+    .links {
+      width: 30%;
     }
+  }
 }
 
-@media(min-width: 1920px){
-    #new_account{
-
-        header{
-            padding-bottom: 30px;    
-        }
-
-        form{
-            width: 20%;
-        }
-        .links{
-            width: 20%;
-        }
+@media (min-width: 1920px) {
+  #new_account {
+    header {
+      padding-bottom: 30px;
     }
+
+    form {
+      width: 20%;
+    }
+    .links {
+      width: 20%;
+    }
+  }
 }

@@ -5,7 +5,7 @@ if (page) {
 
     const btnOpen = document.querySelector('#btn_open');
     const btnClose = document.querySelector('#btn_close');
-    const active = document.querySelector('#newMenu');
+    const active = document.querySelector('#menu');
     const logo = document.querySelector('#logo');
 
     btnOpen.addEventListener('click', (event) => {

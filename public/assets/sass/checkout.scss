@@ -1,6 +1,6 @@
 #checkout {
   position: fixed;
-  z-index: 6;
+  z-index: 4;
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -13,7 +13,6 @@
 
   &.active {
     display: flex;
-    z-index: 5;
     right: 0;
     visibility: visible;
     transition: 0.7s ease-in-out;
@@ -149,9 +148,10 @@
     justify-content: center;
     align-items: center;
     width: 95%;
-    height: 33px;
+    line-height: 33px;
     background-color: #f2cf63;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .btn_insert_card:hover {
