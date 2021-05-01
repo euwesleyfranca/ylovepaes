@@ -1,5 +1,3 @@
-
-
 export function getFormValues(form) {
     const values = {};
 
@@ -10,8 +8,24 @@ export function getFormValues(form) {
     return values;
 }
 
+export function loginUser(email, password) {
+    return firebase.auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((response) => {
+
+            const { user } = response;
+
+            if (user != null) {
+                window.location.href = "menu.html";
+            }
+
+        })
+        .catch((err) => showAlertError('Usuário e/ou senha incorreto(s).'))
+}
+
 export function appendTemplate(element, tagName, html) {
     const wrapElement = document.createElement(tagName);
+    wrapElement.classList.add("item");
 
     wrapElement.innerHTML = html;
 
@@ -25,4 +39,16 @@ export function moneyFormat(value) {
         style: 'currency',
         currency: 'BRL'
     });
+}
+
+export function hideAlertError(form) {
+    const alertElement = form.querySelector('#error');
+    alertElement.style.display = "none";
+}
+
+export function showAlertError(form, error) {
+    const alertElement = form.querySelector('#error');
+    const message = document.querySelector('.message');
+    message.innerHTML = error.message
+    alertElement.style.display = "block";
 }

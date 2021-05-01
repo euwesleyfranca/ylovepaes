@@ -1,6 +1,5 @@
 const page = document.getElementById('index');
 
-
 if (page) {
 
     const btnOpen = document.querySelector('#btn_open');
@@ -18,11 +17,6 @@ if (page) {
         btnOpen.style.display = "block";
         active.classList.remove('active');
     })
-
-
-
-
-
 
 }
 

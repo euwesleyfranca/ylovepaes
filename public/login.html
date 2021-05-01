@@ -10,30 +10,34 @@
     <title>Ylove-Pães | Especialistas em pães caseiros</title>
 </head>
 
-<body id="login" class="login">
+<body id="auth" class="auth">
     <header></header>
-    <div class="logo">
-        <img src="/assets/images/logotipo/logotipo.svg" width="140" height="227" alt="ylove pães logotipo" />
-    </div>
 
-    <a href="menu.html" class="btn_primary">Entrar</a>
-    
-    <a href="#" class="btn_facebook">
-        <img src="/assets/images/icons/facebook.svg" width="25" height="25" alt="facebook" />
-        Entrar com Facebook
-    </a>
-
-    <a href="#" class="btn_google">
-        <img src="/assets/images/icons/google.svg" width="25" height="25" alt="facebook" />
-        Entrar com Google
-    </a>
+    <form id="form-login">
+        <div class="logo">
+            <a href="login.html">
+                <img src="/assets/images/logotipo/logo68.svg" width="68" height="107" alt="ylove pães logotipo" />
+            </a>
+        </div>
+        <label for="email">
+            <input id="email" type="text" name="email" placeholder="digite seu email" />
+            <img src="/assets/images/icons/mail.svg" width="24px" height="24px" alt="email auth icon" />
+        </label>
+        <label for="password">
+            <input id="password" type="password" name="password" placeholder="digite sua senha" />
+            <img src="/assets/images/icons/person.svg" width="24px" height="24px" alt="password auth icon" />
+        </label>
+        <div id="error">
+            <small id="message" class="message">Houve um erro</small>
+        </div>
+        <button id="btnlogin" class="btn_primary" type="submit">Entrar</button>
+    </form>
 
     <div class="links">
         <a href="new_account.html">Cadastre-se</a>
         <a href="forgot_the_password.html">Esqueci a senha</a>
     </div>
-
-
+    <script src="bundle.js"></script>
 </body>
 
 </html>
