@@ -1,5 +1,6 @@
+import { summaryProductList } from "./checkout";
 import firebase from "./firebase-app";
-import { appendTemplate } from "./utils";
+import { appendMenuTemplate, appendSummaryTemplate, appendTemplate } from "./utils";
 
 let productSummary = [];
 
@@ -25,7 +26,7 @@ const renderMenu = (context, productOptions) => {
 
     productOptions.forEach(product => {
 
-        const item = appendTemplate(productList, 'label',
+        const item = appendMenuTemplate(productList, 'label',
 
             `<div class="item_overlay"></div>
                 <input type="text" name="id" value="${product.id}" hidden />
@@ -41,33 +42,33 @@ const renderMenu = (context, productOptions) => {
             `
         )
 
-        item.addEventListener('click', e => {
-            const element = e.target;
-            const id = element.value;
+        item.querySelector('input').addEventListener('click', e => {
+            const element = e.target.value;
 
             const prod = productOptions.filter((option) => {
-                return (Number(option.id) === Number(id))
-            })
-            console.log(prod);
+                return (Number(option.id) === Number(element))
+            })[0];
+
+            productSummary.push(prod.id)
+            renderProductsSummary(context, productOptions)
         })
     });
 }
 
-const renderProductsSummary = () => { }
+
+const renderProductsSummary = (context, productOptions) => {
+
+    const result = productSummary.map(id => {
+
+        return productOptions.filter((item) => {
+            return Number(item.id) === Number(id)
+        })[0]
+
+    })
+
+    summaryProductList(result); // retornando produtos duplicados , verificar
+}
 
 
 
-const checkout = document.querySelector('#checkout');
-const btnCheckout = document.querySelector('#btn_next');
-const closeCheckout = checkout.querySelector('.close_checkout');
-
-btnCheckout.addEventListener('click', event => {
-    checkout.classList.add('active');
-});
-
-closeCheckout.addEventListener('click', event => {
-
-    checkout.classList.remove('active');
-
-});
 

@@ -23,9 +23,20 @@ export function loginUser(email, password) {
         .catch((err) => showAlertError('Usuário e/ou senha incorreto(s).'))
 }
 
-export function appendTemplate(element, tagName, html) {
+export function appendMenuTemplate(element, tagName, html) {
     const wrapElement = document.createElement(tagName);
     wrapElement.classList.add("item");
+
+    wrapElement.innerHTML = html;
+
+    element.append(wrapElement);
+
+    return wrapElement;
+}
+
+export function appendSummaryTemplate(element, tagName, html) {
+    const wrapElement = document.createElement(tagName);
+    wrapElement.classList.add("summary_details");
 
     wrapElement.innerHTML = html;
 
