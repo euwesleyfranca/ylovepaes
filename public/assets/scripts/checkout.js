@@ -15,20 +15,17 @@ closeCheckout.addEventListener('click', event => {
 });
 
 
-const summary = document.querySelector('.summary');
-//summary.innerHTML = ''
+export function summaryProductList(context, items) {
 
-export function summaryProductList(itens) {
+    items.forEach(item => {
 
-    itens.forEach(product => {
-
-        appendSummaryTemplate(summary, 'label',
-
+        appendSummaryTemplate(context, 'label',
             `            
-             <small class="title">${product.title}</small>
-             <small class="price">${moneyFormat(product.price)}</small>
+             <small class="title">${item.title}</small>
+             <small class="price">${moneyFormat(item.price)}</small>
              <img src="./assets/images/icons/trash.svg" width="16px" height="16px" alt="trash" />
             `
         )
+
     })
 }

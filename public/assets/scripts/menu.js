@@ -1,10 +1,10 @@
 import { summaryProductList } from "./checkout";
 import firebase from "./firebase-app";
-import { appendMenuTemplate, appendSummaryTemplate, appendTemplate } from "./utils";
+import { appendMenuTemplate } from "./utils";
 
 let productSummary = [];
 
-document.querySelectorAll('#container').forEach(page => {
+document.querySelectorAll('#index').forEach(page => {
     const db = firebase.firestore();
 
     db.collection('yloveproducts').onSnapshot(snapshot => {
@@ -21,6 +21,7 @@ document.querySelectorAll('#container').forEach(page => {
 
 const renderMenu = (context, productOptions) => {
 
+
     const productList = context.querySelector('.products');
     productList.innerHTML = "";
 
@@ -29,7 +30,7 @@ const renderMenu = (context, productOptions) => {
         const item = appendMenuTemplate(productList, 'label',
 
             `<div class="item_overlay"></div>
-                <input type="text" name="id" value="${product.id}" hidden />
+                <input type="checkbox" name="id" value="${product.id}"  />
                 <img src="${product.image}" height="70px" width="44px" alt="Pão caseiro em São Paulo " />
              <div class="description">
                 <p>${product.title}</p>
@@ -42,31 +43,41 @@ const renderMenu = (context, productOptions) => {
             `
         )
 
-        item.querySelector('input').addEventListener('click', e => {
-            const element = e.target.value;
+        item.querySelector('[type=checkbox]').addEventListener('change', e => {
+            const { checked, value } = e.target;
 
-            const prod = productOptions.filter((option) => {
-                return (Number(option.id) === Number(element))
-            })[0];
+            if (checked) {
 
-            productSummary.push(prod.id)
+                const prod = productOptions.filter((option) => {
+                    return (Number(option.id) === Number(value))
+                })[0];
+
+                productSummary.push(prod.id)
+
+            } else {
+                productSummary = productSummary.filter((id) => {
+                    return Number(id) !== Number(value)
+                })
+            }
+
             renderProductsSummary(context, productOptions)
-        })
+        });
     });
 }
 
 
 const renderProductsSummary = (context, productOptions) => {
+    const summary = context.querySelector('.summary');
+    summary.innerHTML = "";
 
-    const result = productSummary.map(id => {
+    const result = productSummary
+        .map(id => {
+            return productOptions.filter(item => {
+                return +item.id === +id;
+            })[0]
+        });
 
-        return productOptions.filter((item) => {
-            return Number(item.id) === Number(id)
-        })[0]
-
-    })
-
-    summaryProductList(result); // retornando produtos duplicados , verificar
+    summaryProductList(summary, result);
 }
 
 

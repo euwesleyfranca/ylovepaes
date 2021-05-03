@@ -539,6 +539,14 @@ label {
   background-color: var(--white);
   align-items: center;
 }
+#checkout .resume {
+  position: absolute;
+  font-size: 12px;
+  color: #f2cf63;
+  font-weight: 600;
+  z-index: 1;
+  top: 120px;
+}
 #checkout.active {
   display: flex;
   right: 0;
