@@ -45,62 +45,61 @@
             </div>
         </div>
         <footer class="footer_container">
-           <!--  <div id="btn_prev" class="btn_prev">
-                Prev
-            </div> -->
-            <a id="btn_next" class="btn_next">
-              Finalizar Compras
-            </a>
+            <button type="submit" id="btn_next" class="btn_next">
+                Finalizar Compras
+            </button>
         </footer>
 
-    </div>   
-
-    <div id="checkout" class="active"><!--active class para ativar o checkout-->
-        <img src="./assets/images/icons/close.svg" width="18px" height="18px" alt="close checkout" class="close_checkout" />
-       <small class="resume">Resumo do pedido</small>
-        <div class="summary">          
-           
-           
-                  
-        </div>
-
-        <div class="machine">
-        <div class="logo_pay">
-            Safra <span>pay</span>
-        </div>
-        <div class="displayCheckout">
-            <img src="./assets/images/logotipo/safrapay-logo.svg" width="123px" height="23px" alt="">
-           <div class="dataDisplay">  
-               <small>Total: R$ 1000,00</small>             
-                <p id="insert_the_card">Aguardando os dados para finalizar sua compra</p>
-           </div>
-        </div> 
-        
-        <div class="formData">
-
-            <form action="#">
-                <label for="credit_card_name">Titular do cartão</label>
-                <input type="text" name="credit_number" id="credit_card_name" class="credit_card_input" />
-                <label for="redit_card_number">nº cartão</label>
-                <input type="number" name="credit_number" id="credit_card_number" class="credit_card_input" />
-                <div class="date_code">
-                    <label for="credit_card_validate">Validade
-                         <input type="text" name="credit_number" id="credit_card_validate" class="input_small" />
-                    </label>
-                    <label for="credit_card_code">Cod
-                         <input type="number" name="credit_number" id="credit_card_code" class="input_small" />
-                    </label>    
-                </div>
-            </form>
-
-        </div>
-        </div>
-        <a href="orders.html" id="btn_insert_card" class="btn_insert_card">
-            Pay
-        </a>        
     </div>
-<script src="bundle.js"></script>
-    
+
+    <div id="checkout" class="">
+        <!--active class para ativar o checkout-->
+        <img src="./assets/images/icons/close.svg" width="18px" height="18px" alt="close checkout"
+            class="close_checkout" />
+        <small class="resume">Resumo do pedido</small>
+        <div class="summary"></div>
+        <div class="machine">
+            <div class="logo_pay">
+                Safra <span>pay</span>
+            </div>
+            <div class="displayCheckout">
+                <img src="./assets/images/logotipo/safrapay-logo.svg" width="123px" height="23px" alt="">
+                <div class="dataDisplay">
+                    <small class="total"></small>
+                    <p id="insert_the_card"></p>
+                </div>
+            </div>
+
+            <div class="formData">
+                <form id="form" action="#">
+                    <label for="credit_card_name">Titular do cartão</label>
+                    <input type="text" name="credit_card_name" id="credit_card_name" class="credit_card_input"
+                        required />
+                    <label for="redit_card_number">nº cartão</label>
+                    <input type="text" name="credit_number" id="credit_card_number" class="credit_card_input"
+                        required />
+                    <div class="date_code">
+                        <label for="credit_card_validate">Validade
+                            <input type="text" name="credit_number" id="credit_card_validate" class="input_small"
+                                required />
+                        </label>
+                        <label for="credit_card_code">Cod
+                            <input type="text" name="credit_number" id="credit_card_code" class="input_small"
+                                required />
+                        </label>
+                    </div>
+                    <small class="messageCard">mensagem</small>
+                    <button type="submit" id="btn_insert_card" class="btn_insert_card">
+                        Pay
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="bundle.js"></script>
+
 </body>
 
 </html>

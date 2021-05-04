@@ -11,6 +11,13 @@
   background-color: var(--white);
   align-items: center;
 
+  .messageCard{
+    color: var(--white);
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
   .resume {
     position: absolute;
     font-size: 12px;

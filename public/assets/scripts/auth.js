@@ -1,5 +1,5 @@
 import firebase from "./firebase-app";
-import { getFormValues, hideAlertError, showAlertError, validateInputDefalt } from "./utils";
+import { getFormValues, hideAlertError, showAlertError } from "./utils";
 
 const page = document.querySelector('#auth');
 const formAuthLogin = document.getElementById('form-login');

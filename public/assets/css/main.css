@@ -539,6 +539,12 @@ label {
   background-color: var(--white);
   align-items: center;
 }
+#checkout .messageCard {
+  color: var(--white);
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
 #checkout .resume {
   position: absolute;
   font-size: 12px;
