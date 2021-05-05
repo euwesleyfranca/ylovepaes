@@ -45,6 +45,7 @@ export function appendSummaryTemplate(element, tagName, html) {
     return wrapElement;
 }
 
+
 export function moneyFormat(value) {
     return parseFloat(value).toLocaleString('pt-br', {
         style: 'currency',

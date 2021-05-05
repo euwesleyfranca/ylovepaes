@@ -104,13 +104,20 @@
 
   .footer_container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: absolute;
     bottom: 0;
     width: 98%;
-    height: 50px;
+    height: 70px;
     background-color: var(--black_l);
     justify-content: center;
+    align-items: center;
+
+    small{
+      color: var(--white);
+      font-size:16px;
+      margin-top: 8px;
+    }
 
     .btn_next {
       display: flex;

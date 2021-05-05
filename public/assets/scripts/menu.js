@@ -10,6 +10,9 @@ document.querySelectorAll('#index').forEach(page => {
     const next = page.querySelector('#btn_next');
     //next.disabled = true
 
+    const totalfooter = page.querySelector('#totalfooter');
+    totalfooter.innerHTML = ""
+
     db.collection('yloveproducts').onSnapshot(snapshot => {
 
         const products = [];
@@ -102,6 +105,7 @@ const renderDisplayCheckout = (productOptions) => {
     }, 0)
 
     total.innerHTML = moneyFormat(valueTotal)
+    totalfooter.innerHTML = ' Total: ' + moneyFormat(valueTotal)
 
     if (valueTotal > 0) {
         data.innerHTML = "Insira os dados do cartão para finalizar sua compra"

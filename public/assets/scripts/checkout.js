@@ -27,8 +27,6 @@ export function summaryProductList(context, items) {
     })
 }
 
-const cardCvvValue = []
-
 checkout.querySelectorAll('#form').forEach(page => {
 
     const cardName = page.querySelector('#credit_card_name')
@@ -56,18 +54,8 @@ checkout.querySelectorAll('#form').forEach(page => {
         mask: '000[0]'
     })
 
-    cardName.addEventListener('change', e => {
-        const cardNameLength = e.target.value.length
-        if (cardNameLength <= 0 || cardNameLength == null) {
-            console.log('zero não pode');
-            console.log(cardNameLength);
-        }
-    })
-
-    cardNumber.addEventListener('change', e => {
-        const cardNumberLength = e.target.value.length
-
-    })
+    cardName.addEventListener('change', e => { e.target.value.length })
+    cardNumber.addEventListener('change', e => { e.target.value.length })
 
     cardExpire.addEventListener('change', e => {
         const cardExpireValue = e.target.value
@@ -78,6 +66,10 @@ checkout.querySelectorAll('#form').forEach(page => {
             messageValidate.innerHTML = 'Cartão inválido, entre em contato com sua operadora'
         }
 
+    })
+
+    page.querySelectorAll('input').forEach(input => {
+        console.log(input.value);
     })
 
 });
