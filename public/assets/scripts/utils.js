@@ -1,3 +1,5 @@
+import Imask from "imask";
+
 export function getFormValues(form) {
     const values = {};
 
@@ -45,7 +47,6 @@ export function appendSummaryTemplate(element, tagName, html) {
     return wrapElement;
 }
 
-
 export function moneyFormat(value) {
     return parseFloat(value).toLocaleString('pt-br', {
         style: 'currency',
@@ -64,3 +65,32 @@ export function showAlertError(form, error) {
     message.innerHTML = error.message
     alertElement.style.display = "block";
 }
+
+export function clearDisplay(cardName, cardNumber, cardValidate, cardCvv, total) {
+    cardName.innerHTML = '';
+    cardNumber.innerHTML = '';
+    cardValidate.innerHTML = '';
+    cardCvv.innerHTML = '';
+    total.innerHTML = '';
+}
+
+export function cardNumberMask(number) {
+    new Imask(number, {
+        mask: '0000 0000 0000 0000'
+    })
+}
+
+export function cardExpireMask(expire) {
+    new Imask(expire, {
+        mask: '00/00'
+    })
+}
+
+export function cardCvvMask(cvv) {
+    new Imask(cvv, {
+        mask: '000[0]'
+    })
+}
+
+
+

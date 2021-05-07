@@ -119,9 +119,28 @@
         height: 100px;
         background-color: cornflowerblue;
 
+        #insert_the_card{
+          display: flex;
+          flex-direction:column;
+          justify-content:center;
+          align-items: center;
+          text-align: center;
+
+          img{
+            padding: 2px;
+          }
+        }
+
         p {
           font-size: 16px;
           text-align: center;
+          margin: 5px;
+        }
+
+        div{
+          flex-direction:row;
+          width: 25%;
+          justify-content:space-between;
         }
       }
     }

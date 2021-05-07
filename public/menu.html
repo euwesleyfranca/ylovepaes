@@ -24,12 +24,18 @@
     </header>
 
     <div id="menu" class="">
+        <span>
+            <img src="./assets/images/avatar/avatar.svg" width="70" height="80" alt="">
+            <small class="username">wesley franca</small>
+            <small class="useremail">email@email.com</small>
+        </span>
+
         <ul>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="orders.html">Meus Pedidos</a></li>
             <li><a href="#">Acompanhar Entrega</a></li>
             <li><a href="#">Vouchers</a></li>
-            <li><a href="index.html">Sair</a></li>
+            <li><a id="logout">Sair</a></li>
         </ul>
     </div>
 
@@ -46,7 +52,7 @@
         </div>
         <footer class="footer_container">
             <small id="totalfooter">Total: R$ 0,00</small>
-            <button type="submit" id="btn_next" class="btn_next">
+            <button type="submit" id="btn_next" class="btn_next" disabled=true>
                 Finalizar Compras
             </button>
         </footer>
@@ -67,30 +73,33 @@
                 <img src="./assets/images/logotipo/safrapay-logo.svg" width="123px" height="23px" alt="">
                 <div class="dataDisplay">
                     <small class="total"></small>
-                    <p id="insert_the_card"></p>
+                    <small id="insert_the_card"></small>
+                    <small class="name-place"></small>
+                    <small class="number-place"></small>
+                    <div>
+                        <small class="valid-place"></small>
+                        <small class="cod-place"></small>
+                    </div>
                 </div>
             </div>
 
             <div class="formData">
                 <form id="form" action="#">
                     <label for="credit_card_name">Titular do cartão</label>
-                    <input type="text" name="credit_card_name" id="credit_card_name" class="credit_card_input"
-                        required />
+                    <input type="text" name="creditcard" id="credit_card_name" class="credit_card_input" required />
                     <label for="redit_card_number">nº cartão</label>
-                    <input type="text" name="credit_number" id="credit_card_number" class="credit_card_input"
-                        required />
+                    <input type="text" name="creditcard" id="credit_card_number" class="credit_card_input" required />
                     <div class="date_code">
                         <label for="credit_card_validate">Validade
-                            <input type="text" name="credit_number" id="credit_card_validate" class="input_small"
+                            <input type="text" name="creditcard" id="credit_card_validate" class="input_small"
                                 required />
                         </label>
                         <label for="credit_card_code">Cod
-                            <input type="text" name="credit_number" id="credit_card_code" class="input_small"
-                                required />
+                            <input type="text" name="creditcard" id="credit_card_code" class="input_small" required />
                         </label>
                     </div>
-                    <small class="messageCard">mensagem</small>
-                    <button type="submit" id="btn_insert_card" class="btn_insert_card">
+
+                    <button type="submit" id="btn_insert_card" class="btn_insert_card" disabled='true'>
                         Pay
                     </button>
                 </form>
