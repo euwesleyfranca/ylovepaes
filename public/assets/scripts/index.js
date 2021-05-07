@@ -4,6 +4,7 @@ import './auth';
 import './welcome';
 import './menu';
 import './checkout';
+import './profile';
 
 
 

@@ -7,6 +7,7 @@
     <meta name="description" content="Pães caseiros feitos com carinho, entregues quetinhos na sua casa" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/cropper.min.css" />
     <title>Ylove-Pães | Especialistas em pães caseiros</title>
 </head>
 
@@ -23,11 +24,16 @@
         </div>
     </header>
 
-    <div id="menu" class="">
-        <span>
-            <img src="./assets/images/avatar/avatar.svg" width="70" height="80" alt="">
+    <div id="menu" class="open active">
+        <span id="user-profile">
+            <img src="./assets/images/avatar/avatar.svg" class="" id="profile-preview" width="70" height="80" alt="">
             <small class="username">wesley franca</small>
             <small class="useremail">email@email.com</small>
+            <button type="submit" id="photo-select" class="btn_primary">Escolher Foto</button>
+            <form action="" method="get">
+                <input type="file" name="profile" id="profile" hidden />
+                <button type="submit" class="btn_process" id="save">Salvar</button>
+            </form>
         </span>
 
         <ul>
@@ -43,7 +49,6 @@
 
         <div class="productList">
             <header class="header_product_list">
-                <div class="over"></div>
                 <h1>Confira nossa seleção de produtos</h1>
             </header>
             <div class="products">

@@ -52,14 +52,16 @@ firebase.auth().onAuthStateChanged(function (user) {
 
                     `<div class="item_overlay"></div>
                 <input type="checkbox" name="id" id="check" value="${product.id}" hidden />
-                <img src="${product.image}" height="70px" width="44px" alt="Pão caseiro em São Paulo " />
-             <div class="description">
-                <p>${product.title}</p>
-                <small>${product.description}</small>
-             </div>
-             <div class="price">
-                <p>${product.price}</p>
-                <small>Reais</small>
+                <img src="${product.image}" height="250px" width="100%" alt="Pão caseiro em São Paulo " />
+             <div>
+                <div class="description">
+                    <p>${product.title}</p>
+                    <small>${product.description}</small>
+                </div>
+                <div class="price">
+                    <p>${product.price}</p>
+                    <small>Reais</small>
+                </div>
              </div>
             `
                 )
