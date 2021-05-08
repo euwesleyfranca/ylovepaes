@@ -101,7 +101,7 @@ label {
 #login > header {
   display: none;
   position: absolute;
-  background-image: url("/assets/images/background/paes-caseiros-em-sao-paulo.jpg");
+  background-image: url("assets/images/background/paes-caseiros-brasil.jpg");
   background-repeat: no-repeat;
   background-color: var(--white);
   box-shadow: 5px 10px 18px #6e6c6c;
@@ -150,9 +150,10 @@ label {
   position: absolute;
   top: 0;
   background-color: var(--brown);
-  background-image: url("/assets/images/background/paes-caseiros-em-sao-paulo.jpg");
+  background-image: url("/assets/images/background/paes-caseiros-brasil.jpg");
   background-repeat: no-repeat;
   justify-content: flex-end;
+  background-size: cover;
   align-items: center;
   width: 100%;
   height: 35%;
@@ -258,8 +259,9 @@ label {
   position: absolute;
   top: 0;
   background-color: var(--brown);
-  background-image: url("/assets/images/background/paes-caseiros-em-sao-paulo.jpg");
+  background-image: url("/assets/images/background/paes-caseiros-brasil.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
