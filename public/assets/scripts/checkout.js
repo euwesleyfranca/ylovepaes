@@ -119,7 +119,7 @@ document.querySelectorAll('#checkout').forEach(checkout => {
             }, 5000);
 
             setTimeout(() => {
-                message.innerHTML = 'Agradecemos por escolher a Ylove Pães, bom apetite'
+                message.innerHTML = 'Agradecemos por escolher a I love Pães, bom apetite'
             }, 10000);
 
             setTimeout(() => {

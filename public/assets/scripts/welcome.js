@@ -17,7 +17,7 @@ if (welcome) {
 
             setTimeout(() => {
                 step1.classList.add('open');
-                saudation.innerHTML = 'Seja bem vindo a Ilove Pães, uma nova experiência em pães caseiros!'
+                saudation.innerHTML = 'Seja bem vindo a I love Pães, uma nova experiência em pães caseiros!'
             }, 1000);
 
             setTimeout(() => {
@@ -35,7 +35,7 @@ if (welcome) {
 
             setTimeout(() => {
                 step1.classList.add('open');
-                saudation.innerHTML = 'E se puder fique em casa... nós entregamos pra você!'
+                saudation.innerHTML = 'Se puder fique em casa... nós entregamos pra você!'
             }, 14000);
 
             setTimeout(() => {
