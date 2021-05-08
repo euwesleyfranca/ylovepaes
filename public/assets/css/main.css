@@ -259,7 +259,7 @@ label {
   position: absolute;
   top: 0;
   background-color: var(--brown);
-  background-image: url("/assets/images/background/paes-caseiros-brasil.jpg");
+  background-image: url("/assets/images/background/paes-caseiros-brasil.webp");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: flex-end;
