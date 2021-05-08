@@ -14,6 +14,12 @@ firebase.auth().onAuthStateChanged(function (user) {
             const logout = page.querySelector('#logout');
             const username = page.querySelector('.username');
             const useremail = page.querySelector('.useremail');
+            const photo = page.querySelector('#profile-preview');
+            photo.src = `./assets/images/avatar/avatar.svg`;
+            if (photo != null) {
+                photo.src = user.photoURL
+            }
+
             username.innerHTML = user.displayName
             useremail.innerHTML = user.email
 

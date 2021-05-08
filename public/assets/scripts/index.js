@@ -1,10 +1,10 @@
-import './menu_icon';
-import './new_account';
-import './auth';
-import './welcome';
-import './menu';
-import './checkout';
-import './profile';
+import('./menu_icon');
+import('./new_account');
+import('./auth');
+import('./welcome');
+import('./menu');
+import('./checkout');
+import('./profile');
 
 
 

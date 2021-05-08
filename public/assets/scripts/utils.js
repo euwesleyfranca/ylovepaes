@@ -92,6 +92,19 @@ export function cardCvvMask(cvv) {
     })
 }
 
+export function summaryProductList(context, items) {
+
+    items.forEach(item => {
+        appendSummaryTemplate(context, 'label',
+            `            
+             <small class="title">${item.title}</small>
+             <small class="price">${moneyFormat(item.price)}</small>
+             <img id="trash_product_list" src="./assets/images/icons/trash.svg" width="16px" height="16px" alt="trash" />
+            `
+        )
+    })
+}
+
 
 
 

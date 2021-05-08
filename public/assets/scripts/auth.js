@@ -43,13 +43,10 @@ document.querySelectorAll('.formResetPassword').forEach(form => {
             .then(function (success) {
                 element.style.display = "block"
                 messageSuccess.innerHTML = success.message
-                console.log(success);
 
             }).catch(function (error) {
                 elementError.style.display = "block"
                 messageError.innerHTML = error.message
-                console.log(error);
-
             });
 
     })

@@ -5,14 +5,12 @@ document.querySelectorAll('#user-profile').forEach(profile => {
 
     let cropper = null;
 
-
     const btnElement = profile.querySelector('#photo-select');
     const inputFileElement = profile.querySelector('input[type=file]');
     const profilePreview = profile.querySelector('#profile-preview');
     const menu = profilePreview.closest('#menu');
     const save = profile.querySelector('#save');
-
-
+    save.style.display = "none"
 
     save.addEventListener('click', e => {
         e.preventDefault();
@@ -27,14 +25,20 @@ document.querySelectorAll('#user-profile').forEach(profile => {
 
             const imageReference = storage.ref().child("photos/user.png")
             let user = firebase.auth().currentUser;
+
             imageReference
                 .put(blob)
                 .then(snapshot => snapshot.ref.getDownloadURL())
                 .then(photoURL => user.updateProfile({ photoURL }))
                 .then(() => {
-                    console.log('foto atualizada');
+                    save.innerHTML = 'imagem salva'
                 })
             cropper.destroy();
+
+            setTimeout(() => {
+                save.style.display = 'none'
+            }, 3000)
+
         });
 
 
@@ -52,6 +56,7 @@ document.querySelectorAll('#user-profile').forEach(profile => {
 
         if (e.target.files.length) {
             const file = e.target.files[0];
+            save.style.display = "block"
 
             const reader = new FileReader();
 
@@ -74,6 +79,5 @@ document.querySelectorAll('#user-profile').forEach(profile => {
 
 
     })
-
 
 })
