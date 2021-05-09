@@ -64,6 +64,7 @@ document.querySelectorAll('#user-profile').forEach(profile => {
 
                 profilePreview.src = reader.result;
 
+
                 menu.classList.add('cropping');
 
                 cropper = new Cropper(profilePreview, {
