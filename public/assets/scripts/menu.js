@@ -2,6 +2,8 @@ import { summaryProductList } from "./checkout";
 import firebase from "./firebase-app";
 import { appendMenuTemplate, moneyFormat } from "./utils";
 
+let item = null;
+
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         var user = firebase.auth().currentUser;
@@ -54,7 +56,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
             productOptions.forEach(product => {
 
-                const item = appendMenuTemplate(productList, 'label',
+                item = appendMenuTemplate(productList, 'label',
 
                     `<div class="item_overlay"></div>
                 <input type="checkbox" name="id" id="check" value="${product.id}" hidden />
@@ -73,8 +75,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                 )
                 item.querySelector('[type=checkbox]').addEventListener('change', e => {
                     const { checked, value } = e.target;
-                    if (checked) {
 
+                    if (checked) {
                         const prod = productOptions.filter((option) => {
                             return (Number(option.id) === Number(value))
                         })[0];
@@ -88,15 +90,12 @@ firebase.auth().onAuthStateChanged(function (user) {
                     }
 
                     renderProductsSummary(context, productOptions)
-
-
                 });
             });
-
-
         }
         const renderProductsSummary = (context, productOptions) => {
             const summary = context.querySelector('.summary');
+
             summary.innerHTML = "";
 
             const result = productSummary
@@ -108,7 +107,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 
             summaryProductList(summary, result);
             renderDisplayCheckout(result)
-
         }
 
         const renderDisplayCheckout = (productOptions) => {

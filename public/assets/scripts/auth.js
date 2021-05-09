@@ -40,13 +40,13 @@ document.querySelectorAll('.formResetPassword').forEach(form => {
     submit.addEventListener('click', event => {
         event.preventDefault();
         auth.sendPasswordResetEmail(mail.value)
-            .then(function (success) {
+            .then(function () {
                 element.style.display = "block"
-                messageSuccess.innerHTML = success.message
+                messageSuccess.innerHTML = 'Tudo certo! verifique seu email e siga as instruções'
 
             }).catch(function (error) {
                 elementError.style.display = "block"
-                messageError.innerHTML = error.message
+                messageError.innerHTML = error
             });
 
     })
