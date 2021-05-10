@@ -1,0 +1,22 @@
+#page-not-found{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    .message{
+        max-width: 500px;
+        background-color: var(--white);
+        text-align: center;   
+        
+        h1{
+            color: var(--brown-1);
+            margin: 0px;
+            font-size: 65px;
+        }
+
+        h2{
+            font-size: 35px;
+        }     
+    }
+}
